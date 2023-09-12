@@ -81,7 +81,6 @@ body {
 	display: block;
 	background: none;
 	color: #ffffff;
-
 }
 
 .downloadBtn {
@@ -242,8 +241,6 @@ body {
     flex: 1;
 }
 
-
-
 /* Habilidades */
 .skills_list {
 	margin-top: 1rem;
@@ -332,7 +329,6 @@ hr {
 	border: none;
 	border-top: 2px solid rgba(128, 128, 128, 0.229);
 }
-
 
 #progress {
   position: fixed;
