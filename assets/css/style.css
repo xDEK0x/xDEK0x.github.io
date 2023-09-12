@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Roboto:ital@1&display=swap');
+
+/* Variables CSS */
+:root {
+    --primary-color: #ff7613;
+	--secundary-color: #000000;
+	--tertiary-color: #FFFFFF;
+    --text-color: #000000;
+    --font-family: 'Inter', sans-serif;
+}
+
+/* Reset y estilos globales */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--tertiary-color);
+}
+
+.dark {
+	background-color: black;
+	color: black;
+	--primary-color: #ff7613;
+	--secundary-color: #ffffff;
+	--tertiary-color: #000000;
+    --text-color: #727171;
+}
+
+/* Switch */
+.switch {
+	background-color:var(--text-color);
+	border-radius: 1000px;
+	border: none;
+	position: fixed;
+	display: flex;
+	width: 75px;
+	height: 35px;
+	padding: 0.5rem;
+	cursor: pointer;
+	top: 2rem;
+	right: 2rem;
+	outline: none;
+}
+
+.switch::after{
+	content: '';
+	display: block;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	background-color: #ffffff;
+	top: 0;
+	left: 0;
+	right: unset;
+	border-radius: 100px;
+	transition: 0.3s ease all;
+	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2)
+}
+
+.active {
+	background-color: #ff7613;
+}
+
+.active::after {
+	right: 0;
+	left: unset;
+}
+
+.switch span {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	display: block;
+	background: none;
+	color: #ffffff;
+
+}
+
+.downloadBtn {
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: 400;
+	background-color: var(--text-color);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	width: 12.3rem;
+	display: inline-block;
+	margin-top: 1rem;
+}
+
+.description {
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: var(--text-color);
+}
+
+.title {
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.item_preTitle {
+	font-size: 1.4rem;
+	color: var(--text-color);
+	font-weight: 300;
+}
+
+.item_title {
+	font-size: 1.6rem;
+	color: var(--secundary-color);
+	font-weight: 500;
+	margin: 0.8rem 0;
+}
+
+.item_subtitle {
+	font-size: 1.4rem;
+	color: var(--text-color);
+	font-weight: 400;
+}
+
+/* Diseño de pagina */
+.container {
+	max-width: 1000px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	padding: 5rem;
+	background-color: #e0e4c7;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+}
+
+.container_dark {
+	max-width: 1000px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	padding: 5rem;
+	background-color: #070707;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		grid-template-columns: 1fr;
+		padding: 3rem;
+		gap: 7rem;
+	}
+}
+.container img {
+	width: 100%;
+}
+
+/* Perfil */
+.profile {
+	grid-column: 1 / -1;
+	margin-bottom: 2rem;
+}
+
+.profile_container {
+	display: flex;
+	gap: 2rem;
+}
+
+.profile_profileImg {
+	max-width: 250px;
+}
+
+.profile_name_firstName {
+	color: var(--secundary-color);
+	font-weight: 200;
+	font-size: clamp(2rem, 8vw, 4rem);
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: -0.8rem;
+}
+
+.profile_name_lastName {
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: clamp(2.5rem, 15vw, 7rem);
+	text-transform: uppercase;
+	display: block;
+}
+
+.profile_title {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	background-color: var(--text-color);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	display: inline-block;
+	margin-top: 1rem;
+}
+
+.downloadBtn {
+	display: block;
+	text-decoration: underline;
+	font-size: 1.6rem;
+	margin-top: 1rem;
+}
+
+.downloadBtn:hover {
+	color: var(--primary-color);
+}
+
+/* Estilos de la página */
+.group-1,
+.group-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.group-3 {
+    width: 100%;
+    margin: 0 auto;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.group-3 > div {
+    flex: 1;
+}
+
+
+
+/* Habilidades */
+.skills_list {
+	margin-top: 1rem;
+	margin-left: 2rem;
+	line-height: 2;
+}
+
+/* Referencia  */
+.ref_item {
+	margin-top: 2rem;
+}
+.ref_name {
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: var(--secundary-color)
+}
+
+/* Educacion */
+.edu_item {
+	margin-top: 2rem;
+}
+
+/* Certificacion */
+.certification_item {
+	margin-top: 2rem;
+}
+/* Experiencia */
+.exp_item {
+	margin-top: 2rem;
+}
+
+/* Proyectos */
+.projects_item {
+	margin-top: 2rem;
+}
+/* Intereses */
+.interest_items {
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+.interest_item {
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	color: var(--text-color);
+}
+.interest_item svg {
+	width: 2rem;
+}
+
+/* Rede Sociales */
+.social_items {
+	margin-top: 2rem;
+}
+
+.social_item {
+	margin-top: 1.5rem;
+	font-size: 1.5rem;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: flex-start;
+	color: var(--text-color);
+}
+
+.social_item:hover {
+	color: var(--primary-color);
+}
+
+.social_item svg {
+	width: 2rem;
+}
+
+hr {
+	grid-column: 1/-1;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 5rem;
+	margin-bottom: 1rem;
+	border: none;
+	border-top: 2px solid rgba(128, 128, 128, 0.229);
+}
+
+
+#progress {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 6rem;
+  height: 6rem;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#progress-value {
+  display: block;
+  height: calc(100% - 1rem);
+  width: calc(100% - 1rem);
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  color: #001a2e;
+}
+
+#progress-value svg {
+	width: 4rem;
+	height: 4rem;
+}
+
+#progress-value:hover {
+  background-color: #001a2e;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+	hr {
+		margin: 0 auto;
+	}
+	
+	#progress {
+		bottom: 1rem;
+		right: 1rem;
+	}
+    .profile {
+        margin-bottom: 0;
+    }
+    .group-3 {
+        flex-direction: column;
+    }
+	.profile_container {
+		flex-direction: column;
+	}
+}
+
